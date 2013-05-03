@@ -12,8 +12,8 @@ def ugly_search_page():
 
 @app.route('/search', methods=['GET'])
 def search_results():
-  expr = request.values['expr']
-  return render_template('search_results.html', expr=expr, descriptors=search_for(expr))
+  expr = request.values.get('expr')
+  return render_template('search_results.html', expr=expr, descriptors=search_for(expr), try_date=request.values.get('trydate'))
 
 #@app.route('/add', methods=['POST'])
 #def add_entry():

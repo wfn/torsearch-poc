@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
 {% block body %}
+  {% if not try_date %}
+  <a href="{{ url_for('search_results') + '?expr=' + expr }}&trydate=1">Add a test date range clause</a>
+  {% else %}
+(Filtering between Feb 5th and Feb 25th.)
+  {% endif %}
   <ul class=entries>
   {% for desc in descriptors %}
   <li><h2>{{ desc.nickname }}</h2>
-  <a href="/search?expr={{ desc.descriptor }}">{{ desc.descriptor }}</a>
+  <a href="/search?expr={{ desc.descriptor }}">{{ desc.descriptor }}</a>, published {{ desc.published.strftime('%d %B %Y at %I.%M %p') }}, fingerprint <a href="/search?expr=${{ desc.fingerprint }}">{{ desc.fingerprint }}</a>
   {% endfor %}
   </ul>
 Query string was {{ expr }}.<br>
