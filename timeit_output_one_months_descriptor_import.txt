@@ -1,0 +1,12 @@
+kostas@server:~/priv/tordev/torsearch$ python
+Python 2.7.1+ (r271:86832, Sep 27 2012, 21:12:17) 
+[GCC 4.5.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import timeit
+>>> timeit.timeit("from tsweb.importer import import_descriptors; import_descriptors('/home/kostas/priv/tordev/data/server-descriptors-2013-02', '/home/kostas/priv/tordev/data/used_201302_desc_test')", number=1)
+[info] (tsweb.importer->import_descriptors, line 8): recalled 0 files processed from my source(s) provided
+committing.. done.
+committing.. done.
+committing.. done.
+[info] (tsweb.importer->import_descriptors, line 27): iterated over 323714 files
+838.2328498363495

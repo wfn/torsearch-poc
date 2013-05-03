@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+   <form action="{{ url_for('search_results') }}" method=GET class=search-form>
+   <dl>
+   <dt>Search string:
+   <dd><input type=text size=20 name=expr>
+   <dt>
+   <dd><input type=submit value=Search>
+   </dl>
+   <br>Try e.g. <b>vidar</b> or <b>98.111.210.142</b> or <b>00006ac3665e1f3c5ab7e53051b3c68bcbfc509e</b>.
+   <br><br>I presently know {{ total }} descriptors.
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=entries>
+  {% for desc in descriptors %}
+  <li><h2>{{ desc.nickname }}</h2>
+  <a href="/search?expr={{ desc.descriptor }}">{{ desc.descriptor }}</a>
+  {% endfor %}
+  </ul>
+Query string was {{ expr }}.<br>
+<a href="/">Back to start page</a>
+{% endblock %}
