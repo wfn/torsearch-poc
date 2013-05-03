@@ -1,0 +1,7 @@
+To run:
+while in root project directory, do
+python runserver.py
+Server will bind to all addresses and port 5000. To specify a port before running:
+export PORT=5000
+
+Currently only tested on Python 2.7.1.
