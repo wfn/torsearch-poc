@@ -1,9 +1,10 @@
+from tsweb.config import config
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import os
 
-uri = os.environ.get('DATABASE_URL', 'postgres://<postgres_username>:<password>@localhost/<database>')
+uri = config.DATABASE_URL
 engine = create_engine(uri)
 db_session = scoped_session(sessionmaker(autocommit=False,
   autoflush=False,
