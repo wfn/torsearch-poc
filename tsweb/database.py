@@ -2,7 +2,6 @@ from tsweb.config import config
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-import os
 
 uri = config.DATABASE_URL
 engine = create_engine(uri)
