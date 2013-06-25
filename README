@@ -1,3 +1,5 @@
 A very early proof-of-concept for Tor Search, a Tor descriptor / archive search application/tool.
 
 This proof of concept is meant to serve as a scalability & bottleneck testing ground.
+
+Original proposal text at: http://kostas.mkj.lt/gsoc2013/gsoc2013.html
